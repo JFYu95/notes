@@ -30,4 +30,19 @@
    obj.pop_back();//无返回值，如需要该元素，需在pop前获取
    ```
 
-   
+
+4. 其他
+
+   ```
+   n = obj.size();
+   obj.resize(10);
+   sort(obj.begin(),obj.end());
+   sort(obj.rbegin().obj.rend());
+   ```
+
+## Map
+
+
+
+## String
+
