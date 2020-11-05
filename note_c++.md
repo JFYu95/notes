@@ -42,7 +42,22 @@
 
 ## Map
 
+1. 构造函数
 
+   ```c++
+   map<int, int> m;
+   ```
 
-## String
+2. 插入
 
+   ```
+   m[key] = value;
+   ```
+
+3. 查找
+
+   ```
+   m.find(aim) != m.end() //aim存在
+   ```
+
+   
