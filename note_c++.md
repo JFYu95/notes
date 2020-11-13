@@ -4,8 +4,10 @@
 
    ```c++
    vector<int> obj;//创建一个空的向量存储容器 int
-   vector<int> obj(5)//创建一个元素为5的容器
-   vector<int> obj(5, 1)//创建一个元素为5的容器,值均为1
+   vector<int> obj(5);//创建一个元素为5的容器
+   vector<int> obj(5, 1);//创建一个元素为5的容器,值均为1
+   int a[] = {1,2,3,4,5};
+   vector<int> obj(a,a+5);
        
    vector<vector<int> > a;//二维数组
    ```
