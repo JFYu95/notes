@@ -86,3 +86,12 @@
 
    
 
+## 其他
+
+```c++
+//判断int型是否溢出 INT_MAX INT_MIN
+long a = 1<<32;
+if (a>INT_MAX)
+    cout<<"溢出"<<endl;
+```
+
