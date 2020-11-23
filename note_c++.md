@@ -62,6 +62,9 @@
    m.find(aim) != m.end() //aim存在 
    ```
 
+4. 注：
+   * map的key（int or string）自带排序，使用`for(auto it=m.begin();it!=m.end();it++){}`即可
+   * 
 
 ## 链表
 
@@ -93,5 +96,9 @@
 long a = 1<<32;
 if (a>INT_MAX)
     cout<<"溢出"<<endl;
+
+//数组长度
+int a[] = {2,32,4,3,4,45};
+int n = sizeof(a)/sizeof(a[0]);
 ```
 
