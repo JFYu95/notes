@@ -100,5 +100,11 @@ if (a>INT_MAX)
 //数组长度
 int a[] = {2,32,4,3,4,45};
 int n = sizeof(a)/sizeof(a[0]);
+
+//取绝对值
+int a = -9;
+double b = -8.999;
+int aa = abs(a);
+double bb = abs(b);
 ```
 
