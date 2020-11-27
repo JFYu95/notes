@@ -52,13 +52,13 @@
 
 2. 插入
 
-   ```
+   ```c++
    m[key] = value;
    ```
 
 3. 查找
 
-   ```
+   ```c++
    m.find(aim) != m.end() //aim存在 
    ```
 
@@ -85,6 +85,25 @@
    ```c++
    ListNode* t = new ListNode(1);
    ListNode* head = new ListNode(0, t);
+   ```
+
+
+## Stack
+
+1. 初始化
+
+   ```c++
+   stack<int> stk;
+   ```
+
+2. 成员函数
+
+   ```c++
+   stk.size() //返回栈中元素个数
+   stk.top() //返回栈顶的元素
+   stk.pop() //从栈中取出并删除元素, 注:返回类型为void
+   stk.push(e) //向栈中添加元素e
+   stk.empty() //栈为空时返回true
    ```
 
    
