@@ -8,6 +8,7 @@
    vector<int> obj(5, 1);//创建一个元素为5的容器,值均为1
    int a[] = {1,2,3,4,5};
    vector<int> obj(a,a+5);
+   vector<int> obj({1,2,3,4,5,6});
        
    vector<vector<int> > a;//二维数组
    ```
@@ -125,5 +126,19 @@ int a = -9;
 double b = -8.999;
 int aa = abs(a);
 double bb = abs(b);
+
+//array vector查找
+#include <algorithm>
+int a[] = {2,3,4,5,6};
+vector<int> vec(a,a+5);
+if (find(a,a+5,4)!=a+5)
+    return true;
+else
+    return false;
+//返回下标
+auto aim = find(vec.begin(),vec.end(),4);
+return aim-vec.begin();
+
+
 ```
 
