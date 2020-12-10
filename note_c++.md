@@ -107,6 +107,30 @@
    stk.empty() //栈为空时返回true
    ```
 
+
+## 二分法
+
+1. 写法
+
+   ```c++
+   //注意while的条件，以及移动左右边界的方式，需匹配，否则会漏掉某些查找
+   int left = 0;
+   int right = nums.size()-1;
+   int mid;
+   while(left<=right){
+       mid = (left+right)>>1;
+       if (/*查找到的情况*/){
+           //...
+       }
+       else if(/*移动左边界*/){
+   		left = mid+1;
+       }
+       else(/*移动右边界*/){
+           right = mid-1;
+       }
+   }
+   ```
+
    
 
 ## 其他
