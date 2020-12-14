@@ -131,6 +131,41 @@
    }
    ```
 
+
+## 深搜
+
+1. 写法
+
+   ```c++
+   int deep_find(int a, int b)
+   {
+       //特殊情况判断
+       //初始化所需变量
+       int c,d,e;
+       //一些操作...
+       find(c,d,e);
+       return e;
+   }
+   void find(int c,int d,int e)
+   {
+       //返回条件，到达叶子结点
+       if(/**/){
+           //...
+       }
+       //搜索宽度
+       for(){
+           //剪枝条件
+           if(/**/){
+               break;
+           }
+           //一些操作
+           find(/**/);
+           //注意返回到原来的状态，以进入for循环下一轮
+       }
+       return;
+   }
+   ```
+
    
 
 ## 其他
@@ -155,7 +190,7 @@ double bb = abs(b);
 #include <algorithm>
 int a[] = {2,3,4,5,6};
 vector<int> vec(a,a+5);
-if (find(a,a+5,4)!=a+5)
+if (find(vec,vec+5,4)!=a+5)
     return true;
 else
     return false;
@@ -163,6 +198,15 @@ else
 auto aim = find(vec.begin(),vec.end(),4);
 return aim-vec.begin();
 
+//注意引用的用法
+//&符号只用在初始化（等号左侧，尽量与参数类型合用，以免出错）和函数形参中，其他地方只需用原变量名即可，否则与&取地址符号（尽量与变量名合用）混淆。
 
+vector<vector<int> > res;
+vector<int> c({1,2,3,4});
+//需注意res为开辟的实际存储空间，而不是存放的地址
+//因此
+res.push_back(c);
+//push_back()函数为复制原变量，并存放到操作对象的存储空间中，根据vector特性，若空间不足则扩大。
+//所以push_back()操作已包含复制，需要与python做区别。
 ```
 
