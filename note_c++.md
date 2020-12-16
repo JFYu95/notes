@@ -190,7 +190,7 @@ double bb = abs(b);
 #include <algorithm>
 int a[] = {2,3,4,5,6};
 vector<int> vec(a,a+5);
-if (find(vec,vec+5,4)!=a+5)
+if (find(vec.begin(),vec.end(),4)!=vec.end())
     return true;
 else
     return false;
@@ -208,5 +208,10 @@ vector<int> c({1,2,3,4});
 res.push_back(c);
 //push_back()函数为复制原变量，并存放到操作对象的存储空间中，根据vector特性，若空间不足则扩大。
 //所以push_back()操作已包含复制，需要与python做区别。
+
+//删除vector中重复的元素
+sort(c.begin(), c.end());
+T::iterator new_end = unique(c.begin(), c.end());//"删除"相邻的重复元素
+c.erase(new_end, c.end());//删除(真正的删除)重复的元素
 ```
 
