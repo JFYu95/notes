@@ -213,5 +213,28 @@ res.push_back(c);
 sort(c.begin(), c.end());
 T::iterator new_end = unique(c.begin(), c.end());//"删除"相邻的重复元素
 c.erase(new_end, c.end());//删除(真正的删除)重复的元素
+
+//自定义排序
+sort(nums.begin(), nums.end(), cmp);
+//第三个参数compare，是个自定义的比较函数的指针，名字可以随便命名；原型如下：
+static bool cmp(const Type1& a,const Type2& b);
+
+//for
+vector<int> vec({1,2,3,4});
+for(aoto x : vec){
+    cout<<x<<endl;
+}
+
+//string split函数
+vector<string> split(string str, char* spl)
+{
+    vector<string> res;
+    char *token = strtok((char*)(str.data()), spl);
+    while (token != NULL) {
+        res.push_back(string(token));
+        token = strtok(NULL, spl);
+    }
+    return res;
+}
 ```
 
